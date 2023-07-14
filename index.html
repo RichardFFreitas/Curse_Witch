@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curse Witch</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    header {
+        background-color: black;
+        color: #fff;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 5000;
+    }
+
+    .logo {
+        width: auto;
+        height: 120px;
+    }
+
+    .nav-link {
+        color: #fff;
+    }
+
+
+
+    .navbar-toggler-icon {
+        color: white;
+    }
+
+    h2 {
+        margin-top: 120px;
+        margin-bottom: 75px;
+        color: #fff;
+    }
+
+    h3 {
+        color: #fff;
+    }
+
+    p {
+        margin-left: 15px;
+        color: #fff;
+    }
+
+    #carousel-integrantes {
+        display: flex;
+    }
+
+    #texto-carousel {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10rem;
+    }
+
+    .logo-button {
+        padding: 0;
+        border: none;
+        background: none;
+    }
+
+    .sobre-nos {
+        display: flex;
+        padding: 2rem;
+
+    }
+
+    .sobre-nos p {
+        margin-top: 5rem;
+    }
+
+    #integrantes
+    {
+        margin-bottom: 20px;
+    }
+    .contato ul
+    {
+        list-style: none;
+
+    }
+    .contato a
+    {
+        display: flex;
+        align-items: center;
+        color:#fff ;
+        text-decoration:none;
+        transition:.3s ease all;
+        max-width: 100%;
+    }
+    .contato a p 
+    {
+        margin: 0;
+        margin-left: .5rem;
+    }
+
+    article a 
+    {
+        text-decoration: none;
+        color: #fff;
+    }
+</style>
+
+<body>
+    <!-- Cabeçalho -->
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <button class="logo-button" onclick="window.location.href='index.html'">
+                    <img src="./imgs/logo cursewitch.jpg" class="logo">
+                </button>
+                <button id="menu-mobile" data-bs-toggle="collapse" data-bs-target="#menu" type="button"
+                    class="navbar-toggler">
+                    <span id="navbar-icon" class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a href="#sobre" class="nav-link ">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#integrantes" class="nav-link">Integrantes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#shows" class="nav-link">Shows</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contato" class="nav-link">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carousel -->
+    <section id="inicio">
+        <div class="container w-100  mt-4">
+            <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div data-bs-interval="3000" class="carousel-item  active">
+                        <img class="d-block w-100 img-fluid" src="./imgs/Slide 1.heic">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item ">
+                        <img class="d-block w-100 img-fluid" src="./imgs/Slide 2.heic">
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item ">
+                        <img class="d-block w-100 img-fluid" src="./imgs/Slide 3.heic">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
+
+                    <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev"
+                        type="button">
+                        <span class="carousel-control-prev-icon">
+                        </span>
+                    </button>
+                    <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next"
+                        type="button">
+                        <span class="carousel-control-next-icon"></span></button>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel-exemplo" class="active"
+                            data-bs-slide-to="0"></button>
+                        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <h2 class="d-flex justify-content-center">Sobre Nós</h2>
+        <div class="container sobre-nos">
+            <div class="row w-100">
+                <img src="./imgs/Integrantes.jpg" alt="" srcset="">
+                <p>
+                    Depois de muita deliberação, nós finalmente somos a Cursewitch. Somos uma banda de metal capixaba
+                    formada e idealizada pelo nosso amigo @closet69monster que em meio as dificuldades da pós-pandemia
+                    pôde se unir com o interesse em comum de trazer sonoridades pouco exploradas pelo glorioso cenário
+                    de metal do estado. Em nosso cerne está uma grande apreciação pelo metal formativo de nossas
+                    infâncias e adolescências, bandas como Slipknot, Korn e também um vislumbre pela experiência
+                    eclética da música extrema atual. Trazemos na nossa proposta musical covers desses artistas tão
+                    importantes pra nossa formação artística mas também músicas autorais frutos de uma grande mistura de
+                    influências não tão convencionais que esperamos refrescar quem busca algo novo e somar ao já
+                    magistral cenário underground capixaba
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrantes -->
+    <section id="integrantes">
+        <h2 class="d-flex justify-content-center">Integrantes</h2>
+        <div class="container ">
+            <div class="row mt-4">
+                <!-- Card 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100 text-bg-dark card1">
+                        <img src="./imgs/Victor editado.png" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Victor Halloween</h4>
+                            <p class="card-text">Victor Halloween é a Voz da Banda, com seu timbre grave e voz melódica,
+                                ele trás o Heavy Metal na veia, pra encantar e arrepiar todos que escutam.</p>
+                                <a href="https://www.instagram.com/vihalloween/" class="bi bi-instagram"></a>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100 text-bg-dark rounded-top-10  card2">
+                        <img src="./imgs/Closet monster editado.png" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Closet Monster</h4>
+                            <p class="card-text">Closet, é um guitarrista nato, fundador da banda e experiente quando se
+                                trata som pesado, com sua performance impecável e sua guitarra na mão, nada tem a
+                                capacidade de para-lo</p>
+                                <a href="https://www.instagram.com/closet69monster/" class="bi bi-instagram"></a>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100 text-bg-dark rounded-top-10 card3">
+                        <img src="./imgs/Keven editado.png" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Keven Zanotte</h4>
+                            <p class="card-text">Keven Zanotte, sendo o baterista da banda, mostra a capacidade que um
+                                baterista pode chegar, tocando com empenho mesmo que suas mãos sangrem, mantendo o metal
+                                vivo com suas batidas rasgantes.</p>
+                                <a href="https://www.instagram.com/kevizanottetattoo/" class="bi bi-instagram"></a>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100 text-bg-dark rounded-top-10 card4">
+                        <img src="./imgs/orlando editado.png" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Orlando Ortega</h4>
+                            <p class="card-text">Orlando é o segundo guitarrista da Curse, Trazendo consigo muita
+                                experiencia com o nu metal, Orlando trás uma vibe que faz qualquer um vibrar junto ao
+                                seu som.</p>
+                                <a href="https://www.instagram.com/orlan.doom/" class="bi bi-instagram"></a>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100 text-bg-dark rounded-top-10 card5">
+                        <img src="./imgs/Renato editado.png" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Renato Cerqueira</h4>
+                            <p class="card-text">Renato Cerqueira é o Baixista, vindo forte desde que ingressou na
+                                banda, ja conquistou os faz com seu carisma e seu som, aonde mostra o total potencial
+                                que o baixo pode fazer no metal.</p>
+                                <a href="https://www.instagram.com/renatocerqueiratattoo/" class="bi bi-instagram"></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+    </section>
+    <!-- Shows -->
+    <section id="shows">
+        <h2 class="d-flex justify-content-center">Shows</h2>
+        <div class="container">
+            <div class="row mt-4">
+                <!-- Card 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100 text-bg-dark">
+                        <img src="./imgs/Show 1.webp" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">CurseFuckingWitch</h4>
+                            <p class="card-text">O que é melhor para se comemorar 1 FUCKING ano da Cursewitch? Um
+                                CURSEFUCKINGWITCH FEST É CLARO!
+                                Dia 22/07, às 20:00, vamos estar fazendo o nosso Fest de Aniversário, lá no
+                                @garagerockpub , com um line de PESO de grandes amigos da cena capixaba trazendo
+                                pedradas na orelha durante todo o evento. São eles:
+                                @doggbitehc
+                                @limbo7official
+                                @ashtrayvilavelha
+                                @inceptiondeath
+                                ENTRADA GRATUITA
+                                SORTEIO DE 2 TATTOOS NO VALOR DE R$800,00
+                                FLASH DAY
+
+                                Se eu fosse você não perdia não!
+                                Venham celebrar o aniversário da Bruxa! 🔥.</p>
+                            <a href="https://www.instagram.com/p/CuZyXMKrjKg/" class="btn btn-light">Confira</a>
+                        </div>
+                    </article>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100 text-bg-dark rounded-top-10">
+                        <img src="./imgs/Show 2.heic" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Nu Metal Fest</h4>
+                            <p class="card-text">Bora que é uma atrás da outra!
+                                Dia 15/07 às 21h estaremos abrindo a 5ª edição do Nu Metal Fest lá no @correriamusicbar
+                                junto com @takekorncover @deftones_rio @fuserockoficial @tahomacoversoad
+                                @renegadesoffunkratm e @limbo7official . Trazendo alguns clássicos do nu metal e até
+                                nosso som autoral quem sabe 👀
+                                Tu não pode perder! Cola cedo pra prestigiar e fazer esse caos com a gente 🔥</p>
+                            <a href="https://www.instagram.com/p/CttwM_EuSUt/" class="btn btn-light">Confira</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100 text-bg-dark rounded-top-10">
+                        <img src="./imgs/Show 3.heic" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Monsters Rock Festival</h4>
+                            <p class="card-text">Vai dar nem pra sentir saudades!
+                                Dia 03/06 às 21:00 estaremos mais uma vez lá no @correriamusicbar fazendo aquele show
+                                insano pra vocês, abrindo pros brabos do RJ @rammstein.rj com os parceiros
+                                @suicideesolution @tnt.tributo.oficial @holy_helltribute
+                                Bora que esse promete 🔥.</p>
+                            <a href="https://www.instagram.com/p/CshON-mPSpm/" class="btn btn-light">Confira</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="mt-4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h3 class="d-flex justify-content-center">Contato</h3>
+        <div class="contato">
+            <ul class="social-links">
+                <li>
+                    <a href="https://www.instagram.com/curse.witch/" title="Siga-nos no Instagram">
+                        <i class="bi bi-instagram"></i><p>Siga-nos no Instagram</p>
+                        
+                    </a>
+                </li>
+                <li>
+                    <a href="https://whatsa.me/5527992996606" title="Nos chame no whatsapp">
+                        <i class="bi bi-whatsapp"></i><p>Nos chame no Whatsapp</p>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+
+            
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
